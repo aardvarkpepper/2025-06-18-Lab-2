@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 200px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgb(227, 252, 255);
+}
+
+input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 10px;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  list-style-position: inside;
+  border: 1px solid black;
+  margin: 4px;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(223, 255, 223);
+}
+
+li:nth-child(even) {
+  background-color: lightyellow;
+}

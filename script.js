@@ -80,3 +80,32 @@ const printArray = (arrayInput) => {
 // }
 
 // testTask1();
+
+const inputText = document.getElementById('addItem');
+const addItemButton = document.getElementById('addItemButton');
+const removeLastItemButton = document.getElementById('removeLastItemButton');
+const itemList = document.getElementById('listItems');
+const output=document.getElementById('output');
+
+const clearAndDisplayItems = () => {
+  // itemList.removeChildren();
+  // itemList.textContent="";
+  itemList.innerHTML="";
+  for (let i = 0; i < shoppingList.length; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = shoppingList[i];
+    itemList.appendChild(listItem);
+  }
+}
+removeLastItemButton.addEventListener('click', () => {
+  removeItem();
+  clearAndDisplayItems();
+  inputText.value="";
+});
+
+addItemButton.addEventListener('click', () => {
+  // output.textContent = inputText.value;
+  addItem(inputText.value);
+  clearAndDisplayItems();
+  inputText.value="";
+});
